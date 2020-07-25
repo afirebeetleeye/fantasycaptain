@@ -49,7 +49,6 @@ class Game:
 
         # create the islands
         island_counter = 0
-        #self.island_type = 0
         while island_counter < NUMBER_OF_ISLANDS:
             i = Island(self, island_counter)
             hits = pg.sprite.spritecollide(i, self.islands, False)
@@ -57,7 +56,6 @@ class Game:
                 self.islands.add(i)
                 self.all_sprites.add(i)
                 island_counter += 1
-                #self.island_type += 1
             else:
                 i.kill()
         
